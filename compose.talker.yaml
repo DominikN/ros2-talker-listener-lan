@@ -1,0 +1,10 @@
+# Quick start:
+# $ docker compose -f compose.talker.yaml up
+
+services:
+  talker:
+    build: .
+    network_mode: host
+    environment:
+      - ROS_DOMAIN_ID=123
+    command: ros2 run demo_nodes_cpp talker

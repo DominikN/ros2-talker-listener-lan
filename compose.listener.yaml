@@ -1,0 +1,10 @@
+# Quick start:
+# $ docker compose -f compose.listener.yaml up
+
+services:
+  listener:
+    build: .
+    network_mode: host
+    environment:
+      - ROS_DOMAIN_ID=123
+    command: ros2 run demo_nodes_cpp listener
